@@ -1,0 +1,49 @@
+.dropdown{
+    display:none;
+  z-index: 1;  
+}
+
+.dropdown-menu li:hover .dropdown{
+    display: block;
+    position: absolute;
+    left: 100%; /* Positions the dropdown to the right of the parent menu item */
+    top: 0;     /* Aligns the top of the dropdown with the top of the parent */
+    background-color: white;
+    z-index: 2;
+}
+.dropdown ul{
+    width:5cm;
+    margin:0;
+    padding:0;
+}
+.dropdown ul li{
+    width:5cm;
+    border-bottom: 1px solid #f7f7f7;
+    color: var(--sp-secondary-dark);
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 24px;
+    
+    text-transform: none;
+    white-space: normal;
+}
+
+#menu-item-73c ul{
+    width:3cm;
+}
+
+#menu-item-73c ul li{
+    width:3cm;
+}
+
+#menu-item-73b ul{
+    width:3.2cm;
+}
+
+#menu-item-73b ul li{
+    width:3.2cm;
+}
+
+
+
+
