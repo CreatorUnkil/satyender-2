@@ -12,14 +12,12 @@ function removeInnerElements(elementId) {
 function createClientTestimonial(element, imgSrc, title, description) {
     // Create the main div element
     const div = document.createElement('div');
-
     // Create the image div and add the image
     const imageDiv = document.createElement('div');
     const image = document.createElement('img');
     image.src = imgSrc;
     image.classList = 'animate__animated animate__fadeInLeft'
     imageDiv.appendChild(image);
-
     // Create the section for the title and description
     const section = document.createElement('section');
 
