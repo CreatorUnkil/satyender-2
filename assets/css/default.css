@@ -78,6 +78,7 @@ body {
 
 .our_section_part_title_an_nav {
     display: flex;
+    max-width: 75em;
     align-items: center;
 
     &>h2 {
@@ -377,6 +378,7 @@ body {
             justify-content: center;
             cursor: pointer;
             flex-shrink: 0;
+
             &:hover {
                 border: 3px solid rgb(244, 80, 95);
             }
@@ -760,10 +762,138 @@ body::-webkit-scrollbar {
     padding: 0.6em 1em;
     font-size: large;
     font-weight: 600;
-    &:hover{
+
+    &:hover {
         background-color: black !important;
         color: rgb(255, 231, 231) !important;
         font-size: 1.3em;
+    }
+}
+
+.membershipProgram_part_main {
+    display: none;
+    /* border: 1px solid red; */
+    width: 100%;
+    height: max-content;
+    flex-direction: column;
+    padding-top: 2em;
+
+}
+
+.membershipProgram_part_main_top_text_div {
+    width: 100%;
+    display: flex;
+
+    &>h3 {
+        font-size: xx-large;
+    }
+
+    &>h4 {
+        font-size: medium;
+        text-align: bottom left;
+        margin-top: auto;
+        margin-bottom: 5px;
+    }
+}
+
+.membershipProgram_part_main_bottom_box_div_top {
+    display: flex;
+    padding-left: 2em;
+    padding-top: 1em;
+
+    &>section:first-child {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 1em;
+        width: 25.5em;
+        border: 1px solid black;
+        background-color: white;
+        flex-shrink: 0;
+
+        &>h2 {
+            font-size: 1.4em;
+            text-align: center;
+            padding-bottom: 5px;
+            border-bottom: 3px solid black;
+        }
+
+        &>h4 {
+            font-size: 1em;
+            text-align: center;
+            font-weight: 400;
+            padding: 1em 2em;
+        }
+
+        &>a>img {
+            max-width: 6em;
+        }
+    }
+
+    &>section:last-child {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        /* padding-right: 2em; */
+
+        &>div {
+            padding: 2em 0em;
+            padding-left: 3em;
+
+            &>h2 {
+                font-size: 1.18em;
+                font-weight: 400;
+            }
+
+            &>h2:last-child {
+                margin-top: 1em;
+            }
+        }
+
+        &>img {
+            width: 200px;
+            height: 140px;
+        }
+    }
+}
+
+.membershipProgram_part_main_bottom_box_div_bottom {
+    border: 1px solid #F9515F;
+    height: max-content;
+}
+
+
+.membershipProgram_part_top {
+    border: 1px solid green;
+    position: absolute;
+    width: 340px;
+    height: calc(100%-2px);
+}
+
+.membershipProgram_part_inner_strips {
+    /* border: 1px solid red; */
+    height: 100%;
+    width: 100%;
+
+    &>section:first-child {
+        &>div {
+            text-transform: uppercase;
+            background: rgb(255, 255, 255);
+            background: linear-gradient(90deg, rgba(255, 255, 255, 1) 0%, rgba(249, 81, 95, 1) 24%);
+            color: white;
+            text-align: right;
+            padding: 2px;
+            max-width: 70%;
+            transition: all ease 0.3s;
+            margin-bottom: 6px;
+            &>a::after{
+                content:'';
+                border: 14px solid;
+                position: absolute;
+                border-color: transparent transparent transparent #f9515f;
+                margin-left: 0.2%;
+            }
+        }
     }
 }
 
@@ -783,6 +913,91 @@ body::-webkit-scrollbar {
 
 
 
+
+
+
+
+
+@media (max-width: 1120px) {
+    .our_section_part_main {
+        flex-direction: column;
+    }
+
+    .feature_right {
+        padding-left: 0px;
+    }
+
+    .feature_right_element_left {
+        display: flex;
+        width: 100%;
+    }
+
+    .our_section_part_main_right {
+        display: none;
+    }
+
+    .our_section_part_main_right_phones {
+        display: flex;
+    }
+
+    .feature-wrap {
+        height: 26em;
+        padding-bottom: 2em;
+
+        &>div {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(3, 1fr);
+            grid-column-gap: 0px;
+            grid-row-gap: 0px;
+            height: 100%;
+        }
+
+        &>h3 {
+            text-align: center;
+            width: 100%;
+        }
+    }
+
+    .membershipProgram_part_main_top_text_div {
+        flex-direction: column;
+
+        &>h3 {
+            font-size: 1.4em;
+        }
+
+        &>h4 {
+            font-size: 0.8em;
+        }
+    }
+
+    .membershipProgram_part_main_bottom_box_div_top {
+        &>section:first-child {
+            display: none;
+        }
+    }
+
+    .membershipProgram_part_main_bottom_box_div_top {
+        padding-left: 0em;
+
+        &>section:last-child {
+            background-color: rgb(226, 226, 226);
+            padding-right: 1em;
+
+            &>div {
+                &>h2 {
+                    font-size: 0.8em;
+                    font-weight: 400;
+                }
+            }
+
+            &>img {
+                width: 100px;
+                height: 70px;
+            }
+        }
+    }
+}
 
 
 
@@ -838,48 +1053,6 @@ body::-webkit-scrollbar {
     }
 }
 
-@media (max-width: 1120px) {
-    .our_section_part_main {
-        flex-direction: column;
-    }
-
-    .feature_right {
-        padding-left: 0px;
-    }
-
-    .feature_right_element_left {
-        display: flex;
-        width: 100%;
-    }
-
-    .our_section_part_main_right {
-        display: none;
-    }
-
-    .our_section_part_main_right_phones {
-        display: flex;
-    }
-
-    .feature-wrap {
-        height: 26em;
-        padding-bottom: 2em;
-
-        &>div {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            grid-template-rows: repeat(3, 1fr);
-            grid-column-gap: 0px;
-            grid-row-gap: 0px;
-            height: 100%;
-        }
-
-        &>h3 {
-            text-align: center;
-            width: 100%;
-        }
-    }
-
-}
 
 @media (max-width: 480px) {
     .feature_phone_section_pa {
@@ -904,8 +1077,8 @@ body::-webkit-scrollbar {
         }
     }
 
-    #ourServices_modal_middle_box_content_points{
-        &>section:not(:first-child){
+    #ourServices_modal_middle_box_content_points {
+        &>section:not(:first-child) {
             margin-top: -1.5em;
         }
     }
