@@ -1222,7 +1222,7 @@ body::-webkit-scrollbar {
     display: flex;
     justify-content: center;
     align-items: center;
-    /* display: none; */
+    display: none;
     &>div {
         overflow: hidden;
         border-radius: 0.8em;
