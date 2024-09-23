@@ -13,6 +13,7 @@
   </title>
   <link rel="stylesheet" href="/assets/css/self.css" />
   <link rel="canonical" href="/assets/css/future.css" />
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
   <meta name="description"
     content="Looking for the best IP (Intellectual Property) industry experts in India? Look no further! Mallorn is the leading IP service provider that will exceed your expectations." />
   <link rel="canonical" href="https://mallorntechnology.com/" />
@@ -856,57 +857,96 @@
       =================================-->
 
     <header id="header-section" class="header header-one">
-      <!-- ourServices_modal modal part-->
-      <div class="ourServices_modal" id="ourServices_modal">
-        <div class="ourServices_modal_middle_box">
-          <div class="ourServices_modal_middle_box_close_section">
-            <div onclick="(()=>{
-                    document.getElementById('ourServices_modal').style.display = 'none';
-                  })()">×</div>
-          </div>
-          <div class="ourServices_modal_middle_box_content">
-            <div id="ourServices_modal_middle_box_content_title">
-              <!-- Technology Scouting & Monitoring -->
-            </div>
-            <div id="ourServices_modal_middle_box_content_description">
-              <!-- Dissect the emerging and transforming
-technology space that offers new
-opportunities and threats for your sector and
-organization -->
-            </div>
-            <div id="ourServices_modal_middle_box_content_points">
-              <!-- <section>
-                      <p>-</p>
-                      <h4>Technology Intelligence</h4>
-                    </section>
-                    <section>
-                      <p>-</p>
-                      <h4>Idea Funnel Management</h4>
-                    </section>
-                    <section>
-                      <p>-</p>
-                      <h4>Idea Funnel Management</h4>
-                    </section>
-                    <section>
-                      <p>-</p>
-                      <h4>Idea Funnel Management</h4>
-                    </section>
-                    <section>
-                      <p>-</p>
-                      <h4>Idea Funnel Management</h4>
-                    </section>
-                    <section>
-                      <p>-</p>
-                      <h4>Idea Funnel Management</h4>
-                    </section>
-                    <section>
-                      <p>-</p>
-                      <h4>Idea Funnel Management</h4>
-                    </section> -->
-            </div>
-          </div>
+
+      <!-- enquriy_home_nav_modal modal part-->
+      <section class="enquriy_home_nav_modal" id="enquriy_home_nav_modal">
+        <figure onclick="(()=>{
+          document.getElementById('enquriy_home_nav_modal').style.display = 'none';
+        })()">
+
+        </figure>
+        <div>
+          <figure>
+            <h2 onclick="(()=>{
+              document.getElementById('enquriy_home_nav_modal').style.display = 'none';
+            })()">
+              ×
+            </h2>
+          </figure>
+          <section>
+            <form id="enquiry_form_main_div" action="http://localhost:5000/auth/register" method="post">
+              <div class="enquiry_form_input_box">
+                <section>
+                  <h4>
+                    Please let us know what information you are looking
+                  </h4>
+                  <select name="input_6" id="enquiry_form_LetUsKnow" name="LetUsKnow" class="large gfield_select" aria-invalid="false"
+                    required>
+                    <option value="Get Started">Get Started</option>
+                    <option value="See all Options &amp; Pricing">See all Options &amp; Pricing</option>
+                    <option value="See all Impact Stories">See all Impact Stories</option>
+                    <option value="Download Samples">Download Samples</option>
+                    <option value="Contact Our Specialized Team Today">Contact Our Specialized Team Today</option>
+                    <option value="See Our Methodology">See Our Methodology</option>
+                    <option value="Contact Us">Contact Us</option>
+                    <option value="Meet the Team">Meet the Team</option>
+                    <option value="Others / Custom Requirement">Others / Custom Requirement</option>
+                  </select>
+                </section>
+                <section>
+                  <h4>
+                    First Name
+                  </h4>
+                  <input type="text" id="enquiry_form_firsName" name="firsName" required minlength="3" maxlength="20">
+                </section>
+              </div>
+              <div class="enquiry_form_input_box">
+                <section>
+                  <h4>
+                    Last Name
+                  </h4>
+                  <input type='text' id="enquiry_form_lastName" name="lastName" required minlength="2"maxlength="20">
+                </section>
+                <section>
+                  <h4>
+                    Email Address
+                  </h4>
+                  <input type="email" id="enquiry_form_email" name="email" required>
+                </section>
+              </div>
+              <div class="enquiry_form_input_box enquiry_form_input_box_imp_phone_mob">
+                <section>
+                  <h4>
+                    Phone Number with Country Code
+                  </h4>
+                  <input type='tel'pattern="[0-9]{10}" id="enquiry_form_phoneNumber" name="phoneNumber" required minlength="10"maxlength="16">
+                </section>
+                <section>
+                  <h4>
+                    Country
+                  </h4>
+                  <select required id="enquiry_form_country" name="country" class="large gfield_select" aria-required="true" aria-invalid="false"><option value="">Please Select Country</option><option value="United States">United States</option><option value="Canada">Canada</option><option value="United Kingdom">United Kingdom</option><option value="China">China</option><option value="India">India</option><option value="North Korea">North Korea</option><option value="South korea">South korea</option><option value="United Arab Emirates">United Arab Emirates</option><option value="Afghanistan">Afghanistan</option><option value="Albania">Albania</option><option value="Algeria">Algeria</option><option value="Andorra">Andorra</option><option value="Angola">Angola</option><option value="Antigua and Barbuda">Antigua and Barbuda</option><option value="Argentina">Argentina</option><option value="Armenia">Armenia</option><option value="Australia">Australia</option><option value="Austria">Austria</option><option value="Azerbaijan">Azerbaijan</option><option value="The Bahamas">The Bahamas</option><option value="Bahrain">Bahrain</option><option value="Bangladesh">Bangladesh</option><option value="Barbados">Barbados</option><option value="Belarus">Belarus</option><option value="Belgium">Belgium</option><option value="Belize">Belize</option><option value="Benin">Benin</option><option value="Bhutan">Bhutan</option><option value="Bolivia">Bolivia</option><option value="Bosnia and Herzegovina">Bosnia and Herzegovina</option><option value="Botswana">Botswana</option><option value="Brazil">Brazil</option><option value="Brunei">Brunei</option><option value="Bulgaria">Bulgaria</option><option value="Burkina Faso">Burkina Faso</option><option value="Burundi">Burundi</option><option value="Cabo Verde">Cabo Verde</option><option value="Cambodia">Cambodia</option><option value="Cameroon">Cameroon</option><option value="Central African Republic">Central African Republic</option><option value="Chad">Chad</option><option value="Chile">Chile</option><option value="Colombia">Colombia</option><option value="Comoros">Comoros</option><option value="Congo">Congo</option><option value="Costa Rica">Costa Rica</option><option value="Côte d’Ivoire">Côte d’Ivoire</option><option value="Croatia">Croatia</option><option value="Cuba">Cuba</option><option value="Cyprus">Cyprus</option><option value="Czech Republic">Czech Republic</option><option value="Denmark">Denmark</option><option value="Djibouti">Djibouti</option><option value="Dominica">Dominica</option><option value="Dominican Republic">Dominican Republic</option><option value="East Timor (Timor-Leste)">East Timor (Timor-Leste)</option><option value="Ecuador">Ecuador</option><option value="Egypt">Egypt</option><option value="El Salvador">El Salvador</option><option value="Equatorial Guinea">Equatorial Guinea</option><option value="Eritrea">Eritrea</option><option value="Estonia">Estonia</option><option value="Eswatini">Eswatini</option><option value="Ethiopia">Ethiopia</option><option value="Fiji">Fiji</option><option value="Finland">Finland</option><option value="France">France</option><option value="Gabon">Gabon</option><option value="The Gambia">The Gambia</option><option value="Georgia">Georgia</option><option value="Germany">Germany</option><option value="Ghana">Ghana</option><option value="Greece">Greece</option><option value="Grenada">Grenada</option><option value="Guatemala">Guatemala</option><option value="Guinea">Guinea</option><option value="Guinea-Bissau">Guinea-Bissau</option><option value="Guyana">Guyana</option><option value="Haiti">Haiti</option><option value="Honduras">Honduras</option><option value="Hungary">Hungary</option><option value="Iceland">Iceland</option><option value="Indonesia">Indonesia</option><option value="Iran">Iran</option><option value="Iraq">Iraq</option><option value="Ireland">Ireland</option><option value="Israel">Israel</option><option value="Italy">Italy</option><option value="Jamaica">Jamaica</option><option value="Japan">Japan</option><option value="Jordan">Jordan</option><option value="Kazakhstan">Kazakhstan</option><option value="Kenya">Kenya</option><option value="Kiribati">Kiribati</option><option value="Kosovo">Kosovo</option><option value="Kuwait">Kuwait</option><option value="Kyrgyzstan">Kyrgyzstan</option><option value="Laos">Laos</option><option value="Latvia">Latvia</option><option value="Lebanon">Lebanon</option><option value="Lesotho">Lesotho</option><option value="Liberia">Liberia</option><option value="Libya">Libya</option><option value="Liechtenstein">Liechtenstein</option><option value="Lithuania">Lithuania</option><option value="Luxembourg">Luxembourg</option><option value="Madagascar">Madagascar</option><option value="Malawi">Malawi</option><option value="Malaysia">Malaysia</option><option value="Maldives">Maldives</option><option value="Mali">Mali</option><option value="Malta">Malta</option><option value="Marshall Islands">Marshall Islands</option><option value="Mauritania">Mauritania</option><option value="Mauritius">Mauritius</option><option value="Mexico">Mexico</option><option value="Micronesia">Micronesia</option><option value="Moldova">Moldova</option><option value="Monaco">Monaco</option><option value="Mongolia">Mongolia</option><option value="Montenegro">Montenegro</option><option value="Morocco">Morocco</option><option value="Mozambique">Mozambique</option><option value="Myanmar (Burma)">Myanmar (Burma)</option><option value="Namibia">Namibia</option><option value="Nauru">Nauru</option><option value="Nepal">Nepal</option><option value="Netherlands">Netherlands</option><option value="New Zealand">New Zealand</option><option value="Nicaragua">Nicaragua</option><option value="Niger">Niger</option><option value="Nigeria">Nigeria</option><option value="North Macedonia">North Macedonia</option><option value="Norway">Norway</option><option value="Oman">Oman</option><option value="Pakistan">Pakistan</option><option value="Palau">Palau</option><option value="Panama">Panama</option><option value="Papua New Guinea">Papua New Guinea</option><option value="Paraguay">Paraguay</option><option value="Peru">Peru</option><option value="Philippines">Philippines</option><option value="Poland">Poland</option><option value="Portugal">Portugal</option><option value="Qatar">Qatar</option><option value="Romania">Romania</option><option value="Russia">Russia</option><option value="Rwanda">Rwanda</option><option value="Saint Kitts and Nevis">Saint Kitts and Nevis</option><option value="Saint Lucia">Saint Lucia</option><option value="Saint Vincent and the Grenadines">Saint Vincent and the Grenadines</option><option value="Samoa">Samoa</option><option value="San Marino">San Marino</option><option value="Sao Tome and Principe">Sao Tome and Principe</option><option value="Saudi Arabia">Saudi Arabia</option><option value="Senegal">Senegal</option><option value="Serbia">Serbia</option><option value="Seychelles">Seychelles</option><option value="Sierra Leone">Sierra Leone</option><option value="Singapore">Singapore</option><option value="Slovakia">Slovakia</option><option value="Slovenia">Slovenia</option><option value="Solomon Islands">Solomon Islands</option><option value="Somalia">Somalia</option><option value="South Africa">South Africa</option><option value="Spain">Spain</option><option value="Sri Lanka">Sri Lanka</option><option value="Sudan">Sudan</option><option value="South Sudan">South Sudan</option><option value="Suriname">Suriname</option><option value="Sweden">Sweden</option><option value="Switzerland">Switzerland</option><option value="Syria">Syria</option><option value="Taiwan">Taiwan</option><option value="Tajikistan">Tajikistan</option><option value="Tanzania">Tanzania</option><option value="Thailand">Thailand</option><option value="Togo">Togo</option><option value="Tonga">Tonga</option><option value="Trinidad and Tobago">Trinidad and Tobago</option><option value="Tunisia">Tunisia</option><option value="Turkey">Turkey</option><option value="Turkmenistan">Turkmenistan</option><option value="Tuvalu">Tuvalu</option><option value="Uganda">Uganda</option><option value="Ukraine">Ukraine</option><option value="Uruguay">Uruguay</option><option value="Uzbekistan">Uzbekistan</option><option value="Vanuatu">Vanuatu</option><option value="Vatican City">Vatican City</option><option value="Venezuela">Venezuela</option><option value="Vietnam">Vietnam</option><option value="Yemen">Yemen</option><option value="Zambia">Zambia</option><option value="Zimbabwe">Zimbabwe</option></select>
+                </section>
+              </div>
+              <div class="enquiry_form_input_box enquiry_form_input_box_imp_messageIfAny">
+                <section>
+                  <h4>
+                    Message (if any)
+                  </h4>
+                  <!-- <input type='text' id="enquiry_form_message_if_any" minlength="10" maxlength="500"> -->
+                  <textarea name="messageIfAny" id="enquiry_form_messageIfAny" class="textarea small" aria-invalid="false" rows="10" cols="50" style="width:100%;resize:none;min-height:200px; max-width: 400px;"></textarea>
+                </section>
+              </div>
+              <div class="enquiry_form_input_box enquiry_form_submit_btn_div">
+                <button type="submit" id="enquiry_form_submit_btn">
+                  submit
+                </button>
+              </div>
+            </form>
+          </section>
         </div>
-      </div>
+      </section>
+      <!-- enquriy_home_nav_modal modal part end-->
       <!--===// Start: Header Above
         =================================-->
       <div id="above-header" class="header-above-info d-av-block d-none wow fadeInDown">
@@ -1136,7 +1176,7 @@ organization -->
                               </ul>
                             </div>
                           </li>
-				<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement"
+                          <li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement"
                             id="menu-item-65"
                             class="menu-item menu-item-type-post_type menu-item-object-page menu-item-65 nav-item">
                             <a title="INVENTION_HARVESTING" href="https://mallorntechnology.com"
@@ -1325,8 +1365,8 @@ organization -->
                   <div class="menu-right">
                     <ul class="header-wrap-right">
                       <li class="av-button-area">
-                        <a href="https://mallorntechnology.com/register/" target="_blank"
-                          class="av-btn av-btn-primary av-btn-effect-1">ENQUIRY</a>
+                        <div id="enquriy_home_nav_btn" class="av-btn av-btn-primary av-btn-effect-1">ENQUIRY</div>
+
                       </li>
                     </ul>
                   </div>
@@ -1741,42 +1781,45 @@ organization -->
             </h4>
             <img width="40" height="40" src="https://img.icons8.com/ios-glyphs/30/circled-left-2.png"
               alt="circled-left-2" />
+          </figure>
+          <section id="our_section_phone_popup1" class="our_section_phone_popup">
+            <figure class="our_section_phone_popup_close">
+              <h2>+</h2>
             </figure>
-            <section id="our_section_phone_popup1" class="our_section_phone_popup">
-              <figure class="our_section_phone_popup_close">
-                <h2>+</h2>
-              </figure>
-              <div id="our_section_phone_popup_inner1">
-                <section class="our_section_over_box">
+            <div id="our_section_phone_popup_inner1">
+              <section class="our_section_over_box">
 
-                  <h4>
-                    Services
-                    Suite
-                    <div>
-      
-                    </div>
-                  </h4>
-                  <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa ipsam cumque at placeat quas temporibus,
-                    nulla soluta nemo, vero porro facere ratione tempore molestiae?
-      
-                  </p>
+                <h4>
+                  Services
+                  Suite
                   <div>
-                    <figure>
-      
-                    </figure>
-                    <section>
-                      <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit.maiores beatae dolor reprehenderit tenetur
-                        voluptas!</h4>
-                      <h4>Lorem ipsum dolor ectetur adipisicing elit.maiores beatae dolor reprehenderit tenetur voluptas!</h4>
-                      <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit.maiores beatae dolor reprehenderit tenetur
-                        voluptas!</h4>
-                      <h4>Lorem ipsum nsectetur adipisicing elit.maiores beatae dolor reprehenderit tenetur voluptas!</h4>
-                    </section>
+
                   </div>
-                </section>
-              </div>
-            </section>
+                </h4>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa ipsam cumque at placeat quas temporibus,
+                  nulla soluta nemo, vero porro facere ratione tempore molestiae?
+
+                </p>
+                <div>
+                  <figure>
+
+                  </figure>
+                  <section>
+                    <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit.maiores beatae dolor reprehenderit
+                      tenetur
+                      voluptas!</h4>
+                    <h4>Lorem ipsum dolor ectetur adipisicing elit.maiores beatae dolor reprehenderit tenetur voluptas!
+                    </h4>
+                    <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit.maiores beatae dolor reprehenderit
+                      tenetur
+                      voluptas!</h4>
+                    <h4>Lorem ipsum nsectetur adipisicing elit.maiores beatae dolor reprehenderit tenetur voluptas!</h4>
+                  </section>
+                </div>
+              </section>
+            </div>
+          </section>
           <figure id="our_section_phone_button2">
             <h4>
               Strategic Digital
@@ -1784,109 +1827,111 @@ organization -->
             </h4>
             <img width="40" height="40" src="https://img.icons8.com/ios-glyphs/30/circled-left-2.png"
               alt="circled-left-2" />
+          </figure>
+          <section id="our_section_phone_popup2" class="our_section_phone_popup">
+            <figure class="our_section_phone_popup_close">
+              <h2>+</h2>
             </figure>
-            <section id="our_section_phone_popup2" class="our_section_phone_popup">
-              <figure class="our_section_phone_popup_close">
-                <h2>+</h2>
-              </figure>
-              <div id="our_section_phone_popup_inner2">
-                <section class="our_section_over_box our_section_over_box2">
-                  <h4>
-                    Strategic Digital
-                    Programs
-                    <div>
-      
-                    </div>
-                  </h4>
-                  <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa ipsam cumque at placeat quas temporibus,
-                    nulla soluta nemo, vero porro facere ratione tempore molestiae?
-      
-                  </p>
-                  <section>
-                    <div>
-                      <figure>
-                        1
-                      </figure>
-                      <section>
-                        <h4>
-                          Lorem saepe commodi dolorum magnam et ratione molestias?
-                        </h4>
-                        <h4>
-                          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam architecto in amet cum sunt. Tenetur
-                          accusamus sunt,
-                        </h4>
-                      </section>
-                    </div>
-                    <div>
-                      <figure>
-                        2
-                      </figure>
-                      <section>
-                        <h4>
-                          Lorem saepe commodi dolorum magnam et ratione molestias?
-                        </h4>
-                        <h4>
-                          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam architecto in amet cum sunt. Tenetur
-                          accusamus sunt,
-                        </h4>
-                      </section>
-                    </div>
-                  </section>
+            <div id="our_section_phone_popup_inner2">
+              <section class="our_section_over_box our_section_over_box2">
+                <h4>
+                  Strategic Digital
+                  Programs
+                  <div>
+
+                  </div>
+                </h4>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa ipsam cumque at placeat quas temporibus,
+                  nulla soluta nemo, vero porro facere ratione tempore molestiae?
+
+                </p>
+                <section>
+                  <div>
+                    <figure>
+                      1
+                    </figure>
+                    <section>
+                      <h4>
+                        Lorem saepe commodi dolorum magnam et ratione molestias?
+                      </h4>
+                      <h4>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam architecto in amet cum sunt.
+                        Tenetur
+                        accusamus sunt,
+                      </h4>
+                    </section>
+                  </div>
+                  <div>
+                    <figure>
+                      2
+                    </figure>
+                    <section>
+                      <h4>
+                        Lorem saepe commodi dolorum magnam et ratione molestias?
+                      </h4>
+                      <h4>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam architecto in amet cum sunt.
+                        Tenetur
+                        accusamus sunt,
+                      </h4>
+                    </section>
+                  </div>
                 </section>
-              </div>
-            </section>
+              </section>
+            </div>
+          </section>
           <figure id="our_section_phone_button3">
             <h4>
               Case
               Studies
             </h4>
-              <img width="40" height="40" src="https://img.icons8.com/ios-glyphs/30/circled-left-2.png"
+            <img width="40" height="40" src="https://img.icons8.com/ios-glyphs/30/circled-left-2.png"
               alt="circled-left-2" />
+          </figure>
+          <section id="our_section_phone_popup3" class="our_section_phone_popup">
+            <figure class="our_section_phone_popup_close">
+              <h2>+</h2>
             </figure>
-            <section id="our_section_phone_popup3" class="our_section_phone_popup">
-              <figure class="our_section_phone_popup_close">
-                <h2>+</h2>
-              </figure>
-              <div id="our_section_phone_popup_inner3">
-                <section class="our_section_over_box our_section_over_box3">
+            <div id="our_section_phone_popup_inner3">
+              <section class="our_section_over_box our_section_over_box3">
 
-                  <h4>
-                    Case
-                    Studies
-                    <div>
-      
-                    </div>
-                  </h4>
-                  <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa ipsam cumque at placeat quas temporibus,
-                    nulla soluta nemo, vero porro facere ratione tempore molestiae?
-      
-                  </p>
+                <h4>
+                  Case
+                  Studies
                   <div>
-                    <section>
-                      <div>
-                        <figure></figure>
-                        <section>
-                          <h4>
-                            Client XYZ
-                          </h4>
-                          <h4>
-                            Lorem anditiis libero. Temporibus nobis fuga tempore itaque?
-                          </h4>
-                        </section>
-                      </div>
-                      <div>
-                        <img src="img/quotes_sign.png" alt="">
-                        <h2>
-                          Lorem ipsum veritatis possimus qui perspiciatis nam cumque expedita.
-                        </h2>
-                      </div>
-                    </section>
-                    <figure></figure>
+
                   </div>
-                </section>
-              </div>
+                </h4>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa ipsam cumque at placeat quas temporibus,
+                  nulla soluta nemo, vero porro facere ratione tempore molestiae?
+
+                </p>
+                <div>
+                  <section>
+                    <div>
+                      <figure></figure>
+                      <section>
+                        <h4>
+                          Client XYZ
+                        </h4>
+                        <h4>
+                          Lorem anditiis libero. Temporibus nobis fuga tempore itaque?
+                        </h4>
+                      </section>
+                    </div>
+                    <div>
+                      <img src="img/quotes_sign.png" alt="">
+                      <h2>
+                        Lorem ipsum veritatis possimus qui perspiciatis nam cumque expedita.
+                      </h2>
+                    </div>
+                  </section>
+                  <figure></figure>
+                </div>
+              </section>
+            </div>
           </section>
           <figure id="our_section_phone_button4">
             <h4>
@@ -1894,48 +1939,48 @@ organization -->
               Benefits
             </h4>
             <img width="40" height="40" src="https://img.icons8.com/ios-glyphs/30/circled-left-2.png"
-            alt="circled-left-2" />
+              alt="circled-left-2" />
           </figure>
           <section id="our_section_phone_popup4" class="our_section_phone_popup">
             <figure class="our_section_phone_popup_close">
               <h2>+</h2>
             </figure>
-              <div id="our_section_phone_popup_inner4">
-                <section class="our_section_over_box our_section_over_box4">
+            <div id="our_section_phone_popup_inner4">
+              <section class="our_section_over_box our_section_over_box4">
 
-                  <h4>
-                    Mutual
-                    Benefits
-                    <div>
-      
-                    </div>
-                  </h4>
-                  <p>
-                    Lorem ipsum dolor sit amet consectetur.
-      
-                  </p>
+                <h4>
+                  Mutual
+                  Benefits
                   <div>
-                    <section>
-                      <div>
-                        <h4>Increased brand
-                          visibility and
-                          awareness</h4>
-                        <h4>Higher conversions
-                          through measurable
-                          marketing strategics</h4>
-                        <h4>Higher conversions
-                          through measurable
-                          marketing strategies.</h4>
-                      </div>
-                      <div>
-                        <img
-                          src="https://media.istockphoto.com/id/1328352067/photo/insurance-agent-lawyer-financial-advisor-broker-discussing-consulting-mature-middle-aged.jpg?s=612x612&w=0&k=20&c=mLgjJEDCFEWWMdaTOrwGYK3ckAvuYIdqkS9n6k7_jxM="
-                          alt="">
-                      </div>
-                    </section>
+
                   </div>
-                </section>
-              </div>
+                </h4>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur.
+
+                </p>
+                <div>
+                  <section>
+                    <div>
+                      <h4>Increased brand
+                        visibility and
+                        awareness</h4>
+                      <h4>Higher conversions
+                        through measurable
+                        marketing strategics</h4>
+                      <h4>Higher conversions
+                        through measurable
+                        marketing strategies.</h4>
+                    </div>
+                    <div>
+                      <img
+                        src="https://media.istockphoto.com/id/1328352067/photo/insurance-agent-lawyer-financial-advisor-broker-discussing-consulting-mature-middle-aged.jpg?s=612x612&w=0&k=20&c=mLgjJEDCFEWWMdaTOrwGYK3ckAvuYIdqkS9n6k7_jxM="
+                        alt="">
+                    </div>
+                  </section>
+                </div>
+              </section>
+            </div>
           </section>
         </div>
       </div>
@@ -3062,6 +3107,7 @@ organization -->
     /* ]]> */
   </script>
   <script type="text/javascript" src="/assets/js/app.js" id="ht_ctc_app_js-js"></script>
+  <!-- <script type="module" src="/assets/js/form.js"></script> -->
   <script type="text/javascript" src="/assets/js/coblocks-animation.js" id="coblocks-animation-js"></script>
   <script type="text/javascript" src="/assets/js/tiny-swiper.js" id="coblocks-tiny-swiper-js"></script>
   <script type="text/javascript" id="coblocks-tinyswiper-initializer-js-extra">
@@ -5465,6 +5511,7 @@ Released under the MIT license
 
     ai_js_code = true;
   </script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
 </body>
 
 </html>
