@@ -458,7 +458,8 @@ our_section_phone_popup_close.forEach((e)=>{
         })
     })
 })
-for (let index = 1; index <= 4; index++) {
+const our_section_phone_popup_count = document.querySelectorAll('.our_section_phone_popup_count')
+for (let index = 1; index <= our_section_phone_popup_count.length; index++) {
     const our_section_phone_button = document.getElementById(`our_section_phone_button${index}`);
     our_section_phone_button.addEventListener('click', () =>{
         const our_section_phone_popup = document.getElementById(`our_section_phone_popup${index}`);
@@ -482,3 +483,38 @@ const enquiry_form_submit_btn = document.getElementById('enquiry_form_submit_btn
 enquiry_form_email.addEventListener('change', () => {
     console.log(enquiry_form_email.value)
 })
+
+
+
+
+
+// Get references to the DIV and arrow buttons
+const scrollableDiv = document.getElementById('our_section_part_inner_main');
+const leftArrow = document.getElementById('our_section_scroll_btn_left');
+const rightArrow = document.getElementById('our_section_scroll_btn_right');
+
+// Set initial scroll position
+let scrollPosition = 0;
+
+// Calculate maximum scroll distance
+const maxScroll = scrollableDiv.scrollWidth - scrollableDiv.clientWidth;
+const scrollAmount = 800
+// Function to handle left arrow click
+function scrollLeft() {
+  if (scrollPosition > 0) {
+    scrollPosition -= scrollAmount; // Adjust scroll increment as needed
+    scrollableDiv.scrollLeft = scrollPosition;
+  }
+}
+
+// Function to handle right arrow click
+function scrollRight() {
+  if (scrollPosition < maxScroll) {
+    scrollPosition += scrollAmount; // Adjust scroll increment as needed
+    scrollableDiv.scrollLeft = scrollPosition;
+  }
+}
+
+// Add event listeners to arrow buttons
+leftArrow.addEventListener('click', scrollLeft);
+rightArrow.addEventListener('click', scrollRight);
