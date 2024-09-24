@@ -466,9 +466,19 @@ for (let index = 1; index <= 4; index++) {
     })
     
 }
-const enquriy_home_nav_btn = document.getElementById('enquriy_home_nav_btn')
+const enquriy_home_nav_btn = document.getElementById('enquriy_home_nav_btn');
 
 enquriy_home_nav_btn.addEventListener('click', () => {
     const enquriy_home_nav_modal = document.getElementById('enquriy_home_nav_modal')
     enquriy_home_nav_modal.style.display = 'flex';
+    console.log('click');
+})
+
+const enquiry_form_email = document.getElementById('enquiry_form_email')
+const enquiry_form_submit_btn = document.getElementById('enquiry_form_submit_btn')
+
+
+
+enquiry_form_email.addEventListener('change', () => {
+    console.log(enquiry_form_email.value)
 })
