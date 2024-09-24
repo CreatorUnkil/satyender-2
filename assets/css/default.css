@@ -1346,6 +1346,9 @@ background-size: cover;
         width: 100%;
     }
 }
+.dropdown ul li{
+    width: 100% !important;
+}
 
 
 
