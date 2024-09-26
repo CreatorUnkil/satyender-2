@@ -76,6 +76,9 @@ body {
     height: 100%;
     height: max-content;
     user-select: none;
+    &::-webkit-scrollbar{
+        display: none;
+    }
 }
 
 .our_section_part_title_an_nav {
