@@ -979,7 +979,8 @@ body::-webkit-scrollbar {
                     margin-right: auto;
                     margin-top: 12px;
                     &>a{
-                        
+                        text-decoration: none;
+                        color: white;
                     }
                 }
                 
