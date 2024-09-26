@@ -85,37 +85,37 @@ feature_right_element_left_title_btn_data.map((data) => {
 
 
 
-const client_logo_images_part_strip_div = document.getElementById('client_logo_images_part_strip_div')
-const client_logo_images_part_c_left = document.getElementById('client_logo_images_part_c_left')
-const client_logo_images_part_c_right = document.getElementById('client_logo_images_part_c_right')
+// const client_logo_images_part_strip_div = document.getElementById('client_logo_images_part_strip_div')
+// const client_logo_images_part_c_left = document.getElementById('client_logo_images_part_c_left')
+// const client_logo_images_part_c_right = document.getElementById('client_logo_images_part_c_right')
 
-let stateCountInterval = 0
-const maxStateCount = 4995
-setInterval(() => {
-    if (stateCountInterval >= maxStateCount) {
-        stateCountInterval = 0
-        client_logo_images_part_strip_div.style.transform = `translateX(${!stateCountInterval ? 135 : stateCountInterval + 135}%)`
-        return
-    }
-    client_logo_images_part_strip_div.style.transform = `translateX(${!stateCountInterval ? 135 : stateCountInterval + 135}%)`
-    stateCountInterval += 135
-}, 10000)
-client_logo_images_part_c_left.addEventListener('click', () => {
-    if (stateCountInterval >= maxStateCount) {
-        stateCountInterval = 0
-        return;
-    }
-    stateCountInterval += 135
-    client_logo_images_part_strip_div.style.transform = `translateX(${!stateCountInterval ? 135 : stateCountInterval + 135}%)`
-})
-client_logo_images_part_c_right.addEventListener('click', () => {
-    if (stateCountInterval <= -maxStateCount) {
-        stateCountInterval = 0
-        return;
-    }
-    stateCountInterval -= 135
-    client_logo_images_part_strip_div.style.transform = `translateX(${!stateCountInterval ? 135 : stateCountInterval + 135}%)`
-})
+// let stateCountInterval = 0
+// const maxStateCount = 4995
+// setInterval(() => {
+//     if (stateCountInterval >= maxStateCount) {
+//         stateCountInterval = 0
+//         client_logo_images_part_strip_div.style.transform = `translateX(${!stateCountInterval ? 135 : stateCountInterval + 135}%)`
+//         return
+//     }
+//     client_logo_images_part_strip_div.style.transform = `translateX(${!stateCountInterval ? 135 : stateCountInterval + 135}%)`
+//     stateCountInterval += 135
+// }, 10000)
+// client_logo_images_part_c_left.addEventListener('click', () => {
+//     if (stateCountInterval >= maxStateCount) {
+//         stateCountInterval = 0
+//         return;
+//     }
+//     stateCountInterval += 135
+//     client_logo_images_part_strip_div.style.transform = `translateX(${!stateCountInterval ? 135 : stateCountInterval + 135}%)`
+// })
+// client_logo_images_part_c_right.addEventListener('click', () => {
+//     if (stateCountInterval <= -maxStateCount) {
+//         stateCountInterval = 0
+//         return;
+//     }
+//     stateCountInterval -= 135
+//     client_logo_images_part_strip_div.style.transform = `translateX(${!stateCountInterval ? 135 : stateCountInterval + 135}%)`
+// })
 
 
 
@@ -167,36 +167,36 @@ const about_client_image_obj = {
 }
 let about_client_image_count = 0;
 
-const client_about_client_part_c_left = document.getElementById('client_about_client_part_c_left')
-const client_about_client_part_c_right = document.getElementById('client_about_client_part_c_right')
-const our_client_info_strip_move = document.getElementById('our_client_info_strip_move')
-client_about_client_part_c_left.addEventListener('click', () => {
-    if (!about_client_image_count) {
-        about_client_image_count = Object.keys(about_client_image_obj).length - 1;
-    } else {
-        about_client_image_count -= 1
-    }
-    removeInnerElements('our_client_info_strip_move')
-    createClientTestimonial(our_client_info_strip_move, about_client_image_obj[about_client_image_count]?.img, about_client_image_obj[about_client_image_count]?.title, about_client_image_obj[about_client_image_count].description)
-})
-client_about_client_part_c_right.addEventListener('click', () => {
-    if (about_client_image_count >= Object.keys(about_client_image_obj).length - 1) {
-        about_client_image_count = 0
-    } else {
-        about_client_image_count += 1
-    }
-    removeInnerElements('our_client_info_strip_move')
-    createClientTestimonial(our_client_info_strip_move, about_client_image_obj[about_client_image_count].img, about_client_image_obj[about_client_image_count].title, about_client_image_obj[about_client_image_count].description)
-})
-setInterval(() => {
-    if (about_client_image_count >= Object.keys(about_client_image_obj).length - 1) {
-        about_client_image_count = 0
-    } else {
-        about_client_image_count += 1
-    }
-    removeInnerElements('our_client_info_strip_move')
-    createClientTestimonial(our_client_info_strip_move, about_client_image_obj[about_client_image_count].img, about_client_image_obj[about_client_image_count].title, about_client_image_obj[about_client_image_count].description)
-}, 10000)
+// const client_about_client_part_c_left = document.getElementById('client_about_client_part_c_left')
+// const client_about_client_part_c_right = document.getElementById('client_about_client_part_c_right')
+// const our_client_info_strip_move = document.getElementById('our_client_info_strip_move')
+// client_about_client_part_c_left.addEventListener('click', () => {
+//     if (!about_client_image_count) {
+//         about_client_image_count = Object.keys(about_client_image_obj).length - 1;
+//     } else {
+//         about_client_image_count -= 1
+//     }
+//     removeInnerElements('our_client_info_strip_move')
+//     createClientTestimonial(our_client_info_strip_move, about_client_image_obj[about_client_image_count]?.img, about_client_image_obj[about_client_image_count]?.title, about_client_image_obj[about_client_image_count].description)
+// })
+// client_about_client_part_c_right.addEventListener('click', () => {
+//     if (about_client_image_count >= Object.keys(about_client_image_obj).length - 1) {
+//         about_client_image_count = 0
+//     } else {
+//         about_client_image_count += 1
+//     }
+//     removeInnerElements('our_client_info_strip_move')
+//     createClientTestimonial(our_client_info_strip_move, about_client_image_obj[about_client_image_count].img, about_client_image_obj[about_client_image_count].title, about_client_image_obj[about_client_image_count].description)
+// })
+// setInterval(() => {
+//     if (about_client_image_count >= Object.keys(about_client_image_obj).length - 1) {
+//         about_client_image_count = 0
+//     } else {
+//         about_client_image_count += 1
+//     }
+//     removeInnerElements('our_client_info_strip_move')
+//     createClientTestimonial(our_client_info_strip_move, about_client_image_obj[about_client_image_count].img, about_client_image_obj[about_client_image_count].title, about_client_image_obj[about_client_image_count].description)
+// }, 10000)
 
 
 
