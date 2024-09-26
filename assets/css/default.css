@@ -978,6 +978,9 @@ body::-webkit-scrollbar {
                 &>p{
                     margin-right: auto;
                     margin-top: 12px;
+                    &>a{
+                        
+                    }
                 }
                 
             }
