@@ -1358,9 +1358,17 @@ background-size: cover;
     width: 100% !important;
 }
 
+#zsiq_float{
+    display: none !important;
+    opacity: 0 !important;
+}
 
 
-
+#ast-scroll-top{
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+}
 
 
 
