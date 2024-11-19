@@ -410,7 +410,7 @@ const feature_right_element_right_featurs_btn_an_text_phone = document.querySele
 for (let index = 1; index <= feature_right_element_right_featurs_btn_an_text.length; index++) {
     const element = feature_right_element_right_featurs_btn_an_text[index - 1];
     element?.addEventListener('click', () => {
-        const data = feature_right_element_left_title_btn__dot_data[index-1];
+        const data = feature_right_element_left_title_btn__dot_data[index - 1];
         document.getElementById('ourServices_modal').style.display = 'flex'
         removeInnerElements('ourServices_modal_middle_box_content_points')
         ourServices_modal_middle_box_content_title.textContent = ''
@@ -420,22 +420,22 @@ for (let index = 1; index <= feature_right_element_right_featurs_btn_an_text.len
 
         // biome-ignore lint/complexity/noForEach: <explanation>
         data.points.forEach((text) => {
-                const sectionElement = document.createElement('section');
-                const paragraphElement = document.createElement('p');
-                const headingElement = document.createElement('h4');
-                paragraphElement.textContent = '-';
-                headingElement.textContent = text;
-                sectionElement.appendChild(paragraphElement);
-                sectionElement.appendChild(headingElement);
-                document.getElementById('ourServices_modal_middle_box_content_points').appendChild(sectionElement);
-            })
-            
+            const sectionElement = document.createElement('section');
+            const paragraphElement = document.createElement('p');
+            const headingElement = document.createElement('h4');
+            paragraphElement.textContent = '-';
+            headingElement.textContent = text;
+            sectionElement.appendChild(paragraphElement);
+            sectionElement.appendChild(headingElement);
+            document.getElementById('ourServices_modal_middle_box_content_points').appendChild(sectionElement);
+        })
+
     })
 }
 for (let index = 1; index <= feature_right_element_right_featurs_btn_an_text_phone.length; index++) {
     const element = feature_right_element_right_featurs_btn_an_text_phone[index - 1];
     element?.addEventListener('click', () => {
-        const data = feature_right_element_left_title_btn__dot_data[index-1];
+        const data = feature_right_element_left_title_btn__dot_data[index - 1];
         document.getElementById('ourServices_modal').style.display = 'flex';
         removeInnerElements('ourServices_modal_middle_box_content_points');
         ourServices_modal_middle_box_content_title.textContent = '';
@@ -445,23 +445,23 @@ for (let index = 1; index <= feature_right_element_right_featurs_btn_an_text_pho
 
         // biome-ignore lint/complexity/noForEach: <explanation>
         data.points.forEach((text) => {
-                const sectionElement = document.createElement('section');
-                const paragraphElement = document.createElement('p');
-                const headingElement = document.createElement('h4');
-                paragraphElement.textContent = '-';
-                headingElement.textContent = text;
-                sectionElement.appendChild(paragraphElement);
-                sectionElement.appendChild(headingElement);
-                document.getElementById('ourServices_modal_middle_box_content_points').appendChild(sectionElement);
-            })
-            
+            const sectionElement = document.createElement('section');
+            const paragraphElement = document.createElement('p');
+            const headingElement = document.createElement('h4');
+            paragraphElement.textContent = '-';
+            headingElement.textContent = text;
+            sectionElement.appendChild(paragraphElement);
+            sectionElement.appendChild(headingElement);
+            document.getElementById('ourServices_modal_middle_box_content_points').appendChild(sectionElement);
+        })
+
     })
 }
 const our_section_phone_popup_close = document.querySelectorAll('.our_section_phone_popup_close')
-our_section_phone_popup_close.forEach((e)=>{
-    e.addEventListener('click',()=>{
+our_section_phone_popup_close.forEach((e) => {
+    e.addEventListener('click', () => {
         const our_section_phone_popup = document.querySelectorAll('.our_section_phone_popup')
-        our_section_phone_popup.forEach((e)=>{
+        our_section_phone_popup.forEach((e) => {
             e.style.display = 'none'
         })
     })
@@ -469,11 +469,11 @@ our_section_phone_popup_close.forEach((e)=>{
 const our_section_phone_popup_count = document.querySelectorAll('.our_section_phone_popup_count')
 for (let index = 1; index <= our_section_phone_popup_count.length; index++) {
     const our_section_phone_button = document.getElementById(`our_section_phone_button${index}`);
-    our_section_phone_button.addEventListener('click', () =>{
+    our_section_phone_button.addEventListener('click', () => {
         const our_section_phone_popup = document.getElementById(`our_section_phone_popup${index}`);
         our_section_phone_popup.style.display = 'flex';
     })
-    
+
 }
 const enquriy_home_nav_btn = document.getElementById('enquriy_home_nav_btn');
 
@@ -504,18 +504,18 @@ const maxScroll = scrollableDiv.scrollWidth - scrollableDiv.clientWidth;
 const scrollAmount = 800
 // Function to handle left arrow click
 function scrollLeft() {
-  if (scrollPosition > 0) {
-    scrollPosition -= scrollAmount; // Adjust scroll increment as needed
-    scrollableDiv.scrollLeft = scrollPosition;
-  }
+    if (scrollPosition > 0) {
+        scrollPosition -= scrollAmount; // Adjust scroll increment as needed
+        scrollableDiv.scrollLeft = scrollPosition;
+    }
 }
 
 // Function to handle right arrow click
 function scrollRight() {
-  if (scrollPosition < maxScroll) {
-    scrollPosition += scrollAmount; // Adjust scroll increment as needed
-    scrollableDiv.scrollLeft = scrollPosition;
-  }
+    if (scrollPosition < maxScroll) {
+        scrollPosition += scrollAmount; // Adjust scroll increment as needed
+        scrollableDiv.scrollLeft = scrollPosition;
+    }
 }
 
 // Add event listeners to arrow buttons
@@ -523,4 +523,21 @@ leftArrow.addEventListener('click', scrollLeft);
 rightArrow.addEventListener('click', scrollRight);
 
 
+
+
+
+ 
+// Navbar JS Start
+
+fetch('../../navbar.html')
+    .then(response => response.text())
+    .then(html => {
+        const navbarContainer = document.getElementById('navbar_main');
+        navbarContainer.innerHTML = html;
+    })
+    .catch(error => {
+        console.error('Error fetching navbar:', error);
+    });
+
+// Navbar JS End
 
