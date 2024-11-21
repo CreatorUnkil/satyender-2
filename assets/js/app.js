@@ -529,15 +529,6 @@ rightArrow.addEventListener('click', scrollRight);
  
 // Navbar JS Start
 
-fetch('../../navbar.html')
-    .then(response => response.text())
-    .then(html => {
-        const navbarContainer = document.getElementById('navbar_main');
-        navbarContainer.innerHTML = html;
-    })
-    .catch(error => {
-        console.error('Error fetching navbar:', error);
-    });
 
 // Navbar JS End
 
