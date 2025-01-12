@@ -501,7 +501,9 @@ let scrollPosition = 0;
 
 // Calculate maximum scroll distance
 const maxScroll = scrollableDiv.scrollWidth - scrollableDiv.clientWidth;
-const scrollAmount = 800
+const scrollAmount = 800;
+const scrollInterval = 3000; // Adjust scroll interval as needed
+
 // Function to handle left arrow click
 function scrollLeft() {
     if (scrollPosition > 0) {
@@ -518,9 +520,23 @@ function scrollRight() {
     }
 }
 
+// Function to scroll automatically
+function autoScroll() {
+    if (scrollPosition < maxScroll) {
+        scrollPosition += scrollAmount; // Adjust scroll increment as needed
+        scrollableDiv.scrollLeft = scrollPosition;
+    } else {
+        scrollPosition = 0;
+        scrollableDiv.scrollLeft = scrollPosition;
+    }
+}
+
 // Add event listeners to arrow buttons
 leftArrow.addEventListener('click', scrollLeft);
 rightArrow.addEventListener('click', scrollRight);
+
+// Start automatic scrolling
+setInterval(autoScroll, scrollInterval);
 
 
 
